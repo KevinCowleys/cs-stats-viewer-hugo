@@ -27,6 +27,11 @@ theme = 'csstatsviewer-theme'
         url = 'https://twitter.com/D3ATHKeeper'
         new_tab = true
 
+    [[params.header.links.link]]
+        text = 'Email'
+        url = 'mailto:kevin@csstatsviewer.com'
+        new_tab = true
+
     [[params.body.buttons]]
         text = 'Chrome'
         url = 'https://chromewebstore.google.com/detail/cs-stats-viewer/fpijccoohfcbgljdmhmklohjfebfjmif'
