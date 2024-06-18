@@ -1,0 +1,36 @@
+<meta charset="utf-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+{{- if hugo.IsProduction | or (eq site.Params.env "production") | and (ne .Params.robotsNoIndex true) }}
+<meta name="robots" content="index, follow">
+{{- else }}
+<meta name="robots" content="noindex, nofollow">
+{{- end }}
+
+{{ with .Site.Params.author }}<meta name="author" content="{{ . }}" />{{ end }}
+{{ with .Site.Params.description }}<meta name="description" content="{{ . }}" />{{ end }}
+
+<!-- Social & Open Graph -->
+<meta property="og:title" content="{{ if .IsPage }}{{ .Title }} - {{ end }}{{ .Site.Title }}" />
+{{ with .Site.Params.description }}<meta property="og:description" content="{{ . }}" />{{ end }}
+<meta property="og:url" content="{{ .Site.BaseURL }}" />
+{{ with .Site.Params.shareImage }}
+<meta property="og:image" content="{{ . | absURL }}" />
+<meta name="twitter:card" content="summary_large_image" />
+<meta name="twitter:title" content="{{ site.Title }}" />
+<meta name="twitter:description" content="{{ site.Params.description }}" />
+<meta name="twitter:site" content="@{{ site.Params.twitterHandle }}" />
+<meta name="twitter:creator" content="@{{ site.Params.twitterHandle }}" />
+<meta property="twitter:image:src" content="{{ . | absURL }}" />
+{{ end }}
+
+{{- /* Title */}}
+<title>{{ if .IsHome }}{{ site.Title }}{{ else }}{{ printf "%s | %s" .Title site.Title }}{{ end }}</title>
+
+{{- /* Favicons */}}
+<link rel="icon" href="{{ site.Params.assets.favicon | default "favicon.ico" | absURL }}">
+<link rel="icon" type="image/png" sizes="16x16" href="{{ site.Params.assets.favicon16x16 | default "favicon-16x16.png" | absURL }}">
+<link rel="icon" type="image/png" sizes="32x32" href="{{ site.Params.assets.favicon32x32 | default "favicon-32x32.png" | absURL }}">
+<link rel="apple-touch-icon" href="{{ site.Params.assets.apple_touch_icon | default "apple-touch-icon.png" | absURL }}">
+
+{{ partialCached "head/css.html" . }}

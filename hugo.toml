@@ -1,3 +1,54 @@
-baseURL = 'https://example.org/'
+baseURL = 'https://www.csstatsviewer.com/'
 languageCode = 'en-us'
-title = 'My New Hugo Site'
+title = 'CS Stats Viewer'
+theme = 'csstatsviewer-theme'
+
+[params]
+    env = 'production'
+    author = 'D3ATHKeeper'
+    twitterHandle  = 'D3ATHKeeper'
+    shareImage = './images/NiKo.png'
+    description = 'Enchance your Counter-Strike experience with the CS Stats Viewer extension'
+    footer = 'CS Stats Viewer is developed independently, and is not officially endorsed by or affiliated with CSStats, ESEA, ESL, FaceIt Leetify or Valve.'
+
+    [params.assets]
+        favicon = './favicon.ico'
+        favicon16x16 = './favicon16x16.png'
+        favicon32x32 = './favicon32x32.png'
+        apple_touch_icon = './apple-touch-icon.png'
+
+    [[params.header.links.link]]
+        text = 'Steam'
+        url = 'https://steamcommunity.com/id/D3ATHKeeper/'
+        new_tab = true
+
+    [[params.header.links.link]]
+        text = 'Twitter'
+        url = 'https://twitter.com/D3ATHKeeper'
+        new_tab = true
+
+    [[params.body.buttons]]
+        text = 'Chrome'
+        url = 'https://chromewebstore.google.com/detail/cs-stats-viewer/fpijccoohfcbgljdmhmklohjfebfjmif'
+        icon = './browsers/chrome.svg'
+        right = './browsers/right-arrow.svg'
+        hover_colour = '#646cffaa'
+
+    [[params.body.buttons]]
+        text = 'FireFox'
+        url = 'https://addons.mozilla.org/en-GB/firefox/addon/cs-stats-viewer/'
+        icon = './browsers/firefox.svg'
+        right = './browsers/right-arrow.svg'
+        hover_colour = '#ff3e00aa'
+
+    [params.body.image.big]
+        alt = "Image of NiKo's Steam profile showing FaceIt and ESEA showcases with quick links to CSStats and Leetify on the side."
+        url = './images/NiKo.png'
+
+    [params.body.image.small1]
+        alt = 'Image of ESEA hover stats showing when hovering over a username on the ESEA website.'
+        url = './images/small1.png'
+
+    [params.body.image.small2]
+        alt = 'Image of browser extension popup showing FaceIt Settings.'
+        url = './images/small2.png'

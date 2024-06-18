@@ -1,0 +1,20 @@
+{{ define "main" }}
+    <h1>{{ site.Title }}</h1>
+    <p>{{ site.Params.description }}</p>
+    <div class="card">
+        {{ range $key, $value := .Site.Params.body.buttons }}
+            {{ if $value.text }}
+                <a href="{{ .url | safeURL }}" title="Install {{ site.Title }} for {{ .text }}" target="{{ cond (.new_tab | default false) "_blank" "_self"}}" class="install {{ lower .text }}">
+                    <img class="install-left" src="{{ $value.icon }}" alt="">
+                    <span>{{ $value.text }}</span>
+                    <img class="install-right" src="{{ $value.right }}" alt="">
+                </a>
+            {{ end }}
+        {{ end }}
+    </div>
+    <div class="image-view">
+        <img class="image-view-big" src="{{ site.Params.body.image.big.url }}" alt="{{ site.Params.body.image.big.alt }}"> 
+        <img class="image-view-small" src="{{ site.Params.body.image.small1.url }}" alt="{{ site.Params.body.image.small1.alt }}"> 
+        <img class="image-view-small" src="{{ site.Params.body.image.small2.url }}" alt="{{ site.Params.body.image.small2.alt }}">
+    </div>
+{{ end }}

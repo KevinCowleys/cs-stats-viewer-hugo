@@ -1,0 +1,7 @@
+{{ range $key, $value := .Site.Params.header.links }}
+    {{ range $key, $list := $value }}
+        {{ if $list.url }}
+            <a href="{{ .url | safeURL }}" title="{{ .text }}" target="{{ cond (.new_tab | default false) "_blank" "_self" }}">{{ .text }}</a>
+        {{ end }}
+    {{ end }}
+{{ end }}
