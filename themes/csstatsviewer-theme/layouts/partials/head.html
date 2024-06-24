@@ -17,11 +17,11 @@
 {{ with .Site.Params.shareImage }}
 <meta property="og:image" content="{{ . | absURL }}" />
 <meta name="twitter:card" content="summary_large_image" />
+<meta name="twitter:image" content="{{ . | absURL }}">
 <meta name="twitter:title" content="{{ site.Title }}" />
 <meta name="twitter:description" content="{{ site.Params.description }}" />
 <meta name="twitter:site" content="@{{ site.Params.twitterHandle }}" />
 <meta name="twitter:creator" content="@{{ site.Params.twitterHandle }}" />
-<meta property="twitter:image:src" content="{{ . | absURL }}" />
 {{ end }}
 
 {{- /* Title */}}
