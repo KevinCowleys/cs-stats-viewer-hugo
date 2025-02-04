@@ -17,15 +17,15 @@ theme = 'csstatsviewer-theme'
         favicon32x32 = './favicon32x32.png'
         apple_touch_icon = './apple-touch-icon.png'
 
-    [[params.header.links.link]]
-        text = 'Steam'
-        url = 'https://steamcommunity.com/id/D3ATHKeeper/'
-        new_tab = true
+    # [[params.header.links.link]]
+    #     text = 'Steam'
+    #     url = 'https://steamcommunity.com/id/D3ATHKeeper/'
+    #     new_tab = true
 
-    [[params.header.links.link]]
-        text = 'Twitter'
-        url = 'https://twitter.com/D3ATHKeeper'
-        new_tab = true
+    # [[params.header.links.link]]
+    #     text = 'Twitter'
+    #     url = 'https://twitter.com/D3ATHKeeper'
+    #     new_tab = true
 
     [[params.header.links.link]]
         text = 'Email'
