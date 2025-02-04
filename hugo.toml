@@ -9,7 +9,7 @@ theme = 'csstatsviewer-theme'
     twitterHandle  = 'D3ATHKeeper'
     shareImage = './images/cardImage.png'
     description = 'Enchance your Counter-Strike experience with the CS Stats Viewer extension'
-    footer = 'CS Stats Viewer is developed independently, and is not officially endorsed by or affiliated with CSStats, ESEA, ESL, FaceIt Leetify or Valve.'
+    footer = 'CS Stats Viewer is developed independently, and is not officially endorsed by or affiliated with CSStats, ESEA, ESL, FaceIt, Leetify or Valve.'
 
     [params.assets]
         favicon = './favicon.ico'
